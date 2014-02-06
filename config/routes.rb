@@ -10,7 +10,7 @@ AngularDemoApp::Application.routes.draw do
   
   
   
-  root :to => 'home#index'
+  root :to => 'home#spa'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
