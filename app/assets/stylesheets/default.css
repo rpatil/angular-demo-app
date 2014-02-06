@@ -28,6 +28,9 @@ footer {
 .front_image{
     width: 65% !important;
 }
+.width_70perc{
+    width: 70% !important;
+}
 bold{
     font-size: 15px;
     font-style: italic;
