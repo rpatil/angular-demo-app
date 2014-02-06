@@ -1,0 +1,12 @@
+
+pg: &pg
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  
+development:
+  <<: *pg
+  database: angular-demo-app
+  username: rapatil
+  password: rapatil
+  host: localhost

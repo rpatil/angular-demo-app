@@ -1,0 +1,77 @@
+<div class="thumbnail">
+  <img class="img-responsive front_image" src="/assets/angularjs_directives.png" alt="">
+  <div class="caption-full">
+    <h4 class="pull-right">&nbsp;</h4>
+    <h4><a href="#">Directive</a>
+    </h4>
+    <p>
+
+      A directive is really a way to teach HTML new tricks.
+    </p>
+    <p>
+      The web when it first came out was really just designed to display static pages. As we all know it’s
+      become very dynamic and we’ve dealt with that pretty well. jQuery came out many years ago and it
+      provided a way to do it. Even before then we could use raw, vanilla JavaScript.
+    </p>
+    <p>Angular takes it up a whole notch and allows us to extend HTML very easily by simply adding
+      attributes, elements or comments.
+    </p>
+  </div>
+  <img class="img-responsive front_image" src="/assets/angularjs_directives_databinding_example.png" alt="">
+  <div class="caption-full">
+    <p>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Enter some text here </button>
+          </span>
+          <input type="text" class="form-control" data-ng-model="tname" />
+        </div><!-- /input-group -->
+        <br/>
+        <div class="panel panel-default">
+          <div class="panel-heading">Example of Directive</div>
+          <div class="panel-body">
+            {{ tname}}
+          </div>
+        </div>
+      </div><!-- /.col-lg-6 -->      
+    </div><!-- /.row -->
+    </p>
+    <p>
+    <ul>
+      <li>Include the ng-app</li>
+      <li>Include the ng-model</li>
+      <li>Bind to that model.</li>
+    </ul>
+      
+      Here’s an example of using a very basic, but important, Angular directive.
+    </p>
+    <p>    
+      Notice at the top we have <bold>ng-app</bold>. Any time you see <bold>ng-</bold> that is an Angular directive. It’s a built-on
+    directive. You can also write custom ones. You can get third party ones and things like that.
+    </p>
+    <p>
+      This particular directive is very important because the script that’s now loaded [at the bottom] is
+      going to kick off and this will initialise the Angular app. Right now we don’t have any particular
+      module associated or any other code but we can still do stuff just by adding <bold>ng-app</bold>.
+    </p>
+    <p>
+      So for example, this is an example of another directive called <bold>ng-model</bold>.
+    What <bold>ng-model</bold> does is behind the scenes it’s going to add a property up in the memory called
+    “name” into what’s called “<bold>the scope</bold>”.
+    </p>
+    <p>
+      If you’ve ever dealt with the concept of a View’s model called a <bold>ViewModel</bold> - Knockout and some
+    other libraries have this concept – then what this is really doing behind the scenes is making an
+    empty ViewModel but then filling it with a <bold>name</bold> property. Now if I want to write out that value then
+    I can simply come over and add a data binding expression.
+    </p>
+    <p>
+      Expressions are really cool because if I wanted to put “1 + 1” and try to write out the result I could
+      do that. You can’t put conditional logic in here because you shouldn’t be putting that type of
+      conditional logic in your views. But out of the box, just by adding the ng-app and ng-model with a property as they type into this text box I can actually bind to that value and that provides a very cool
+      little feature.
+    </p>
+  </div>
+</div>
