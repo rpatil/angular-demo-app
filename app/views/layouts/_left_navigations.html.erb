@@ -4,6 +4,13 @@
     <a id="spa" href="/SPA" class="list-group-item">SPA</a>
     <a id="directives" href="/Directives" class="list-group-item">Directives</a>
     <a id="filters" href="/Filters" class="list-group-item">Filters</a>
+    <a id="view_model" href="/ViewModel" class="list-group-item">ViewModel (Views + Controller)</a>
+
+
+
+
+
+
     <a id="data_bindings" href="/DataBinding" class="list-group-item">Data Bindings</a>
   </div>
 </div>
@@ -33,7 +40,14 @@
         $('#data_bindings').addClass("active");
         $("#data_bindings").attr("href", "#")
         break;
+      case 'view_model':
+        $('#view_model').addClass("active");
+        $("#view_model").attr("href", "#")
+        break;
     }
+    
+    //$('#'+action_name).addClass("active");
+    //$("#"+action_name).attr("href", "#");
   }
 
 </script>

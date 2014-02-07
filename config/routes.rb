@@ -7,6 +7,8 @@ AngularDemoApp::Application.routes.draw do
   match '/SPA', :to => 'home#spa', :via => [:get]
   match '/Directives', :to => 'home#directives', :via => [:get]
   match '/Filters', :to => 'home#filters', :via => [:get]
+  match '/ViewModel', :to => 'home#view_model', :via => [:get]
+  
   
   
   
