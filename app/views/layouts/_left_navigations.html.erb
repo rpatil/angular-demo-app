@@ -1,9 +1,39 @@
 <div class="col-md-3">
   <p class="lead">Example List</p>
   <div class="list-group">
-    <a href="/SPA" class="list-group-item active">SPA</a>
-    <a href="/Directives" class="list-group-item">Directives</a>
-    <a href="/Filters" class="list-group-item">Filters</a>
-    <a href="/DataBinding" class="list-group-item">Data Bindings</a>
+    <a id="spa" href="/SPA" class="list-group-item">SPA</a>
+    <a id="directives" href="/Directives" class="list-group-item">Directives</a>
+    <a id="filters" href="/Filters" class="list-group-item">Filters</a>
+    <a id="data_bindings" href="/DataBinding" class="list-group-item">Data Bindings</a>
   </div>
 </div>
+
+
+<script type="text/javascript">
+
+  $(function() {
+    set_page_navigation_active();
+  });
+
+  function set_page_navigation_active() {
+    switch ('<%=controller.action_name%>') {
+      case 'spa':
+        $('#spa').addClass("active");
+        $("#spa").attr("href", "#")
+        break;
+      case 'directives':
+        $('#directives').addClass("active");
+        $("#directives").attr("href", "#")
+        break;
+      case 'filters':
+        $('#filters').addClass("active");
+        $("#filters").attr("href", "#")
+        break;
+      case 'data_bindings':
+        $('#data_bindings').addClass("active");
+        $("#data_bindings").attr("href", "#")
+        break;
+    }
+  }
+
+</script>

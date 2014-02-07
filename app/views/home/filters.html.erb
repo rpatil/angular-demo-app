@@ -21,17 +21,17 @@
   <img class="img-responsive" style="width: 30%;" src="/assets/angularjs-ngrepeat.png" alt="">
   <div class="caption-full">
     <p>
-    <div ng-init="friends = [ {name:'John', age:25, gender:'boy'},
-                              {name:'Jessie', age:30, gender:'girl'},
-                              {name:'Johanna', age:28, gender:'girl'},
-                              {name:'Joy', age:15, gender:'girl'},
-                              {name:'Mary', age:28, gender:'girl'},
-                              {name:'Peter', age:95, gender:'boy'},
-                              {name:'Sebastian', age:50, gender:'boy'},
-                              {name:'Erika', age:27, gender:'girl'},
-                              {name:'Patrick', age:40, gender:'boy'},
-                              {name:'Samantha', age:60, gender:'girl'},
-                              {name:'Bharat', age:20, gender:'boy'}
+    <div ng-init="friends = [ {name:'Virendra Sehwag', age:25, gender:'boy', city:'Delhi'},
+                              {name:'Gauri', age:30, gender:'girl', city:'Delhi'},
+                              {name:'Deepa', age:28, gender:'girl', city:'Mumbai'},
+                              {name:'Sheetal', age:15, gender:'girl', city:'Chennai'},
+                              {name:'Kiran', age:28, gender:'girl', city:'Banglore'},
+                              {name:'Yuvraj', age:95, gender:'boy', city:'Pune'},
+                              {name:'Rohit', age:50, gender:'boy', city:'Mumbai'},
+                              {name:'Rekha', age:27, gender:'girl', city:'Jaipur'},
+                              {name:'Patrick', age:40, gender:'boy', city:'Delhi'},
+                              {name:'Sneha', age:60, gender:'girl', city:'Kashmir'},
+                              {name:'Bharat', age:20, gender:'boy', city:'Delhi'}
                           ]">
 
       I have {{friends.length}} friends. They are:
@@ -39,7 +39,7 @@
       <br/><br/>
       <ul class="example-animate-container">
         <li class="animate-repeat" ng-repeat="friend in friends | filter:q">
-          [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
+          [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old and lives at {{friend.city}}.
         </li>
       </ul>
     </div>
@@ -48,12 +48,8 @@
   <img class="img-responsive" src="/assets/angularjs-filter.png" alt="">
   <div class="caption-full">
     <p>
-  All this will do is this pipe [|] is a separator between the data binding statement and something
-called a filter.
-    
+      All this will do is this pipe [|] is a separator between the data binding statement and something
+      called a filter.
     </p>
   </div>
-  
-  
-  
 </div>
