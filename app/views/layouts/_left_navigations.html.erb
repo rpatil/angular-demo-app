@@ -5,11 +5,7 @@
     <a id="directives" href="/Directives" class="list-group-item">Directives</a>
     <a id="filters" href="/Filters" class="list-group-item">Filters</a>
     <a id="view_model" href="/ViewModel" class="list-group-item">ViewModel (Views + Controller)</a>
-
-
-
-
-
+    <a id="modules_routes_and_factories" href="/ModulesRoutesAndFactories" class="list-group-item">Modules, Routes and Factories</a>
 
     <a id="data_bindings" href="/DataBinding" class="list-group-item">Data Bindings</a>
   </div>
@@ -25,24 +21,22 @@
   function set_page_navigation_active() {
     switch ('<%=controller.action_name%>') {
       case 'spa':
-        $('#spa').addClass("active");
-        $("#spa").attr("href", "#")
+        $('#spa').addClass("active").attr("href", "#");
         break;
       case 'directives':
-        $('#directives').addClass("active");
-        $("#directives").attr("href", "#")
+        $('#directives').addClass("active").attr("href", "#");
         break;
       case 'filters':
-        $('#filters').addClass("active");
-        $("#filters").attr("href", "#")
+        $('#filters').addClass("active").attr("href", "#");
         break;
       case 'data_bindings':
-        $('#data_bindings').addClass("active");
-        $("#data_bindings").attr("href", "#")
+        $('#data_bindings').addClass("active").attr("href", "#");
         break;
       case 'view_model':
-        $('#view_model').addClass("active");
-        $("#view_model").attr("href", "#")
+        $('#view_model').addClass("active").attr("href", "#");
+        break;
+      case 'modules_routes_and_factories':
+        $('#modules_routes_and_factories').addClass("active").attr("href", "#")
         break;
     }
     

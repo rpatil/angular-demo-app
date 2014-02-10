@@ -8,9 +8,7 @@ AngularDemoApp::Application.routes.draw do
   match '/Directives', :to => 'home#directives', :via => [:get]
   match '/Filters', :to => 'home#filters', :via => [:get]
   match '/ViewModel', :to => 'home#view_model', :via => [:get]
-  
-  
-  
+  match '/ModulesRoutesAndFactories', :to => 'home#modules_routes_and_factories', :via => [:get]
   
   root :to => 'home#spa'
 

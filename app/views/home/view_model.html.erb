@@ -36,24 +36,72 @@
   <div class="caption-full">
     <p>
       Container - called a Controller. The
-        <bold>Controller</bold> will drive things. It’s going to control ultimately what data gets bound into the <bold>View</bold>. If the
-      View passes up data to the controller it will handle passing off maybe to a service which then
-      updates a back-end data store.
+    <bold>Controller</bold> will drive things. It’s going to control ultimately what data gets bound into the <bold>View</bold>. If the
+    View passes up data to the controller it will handle passing off maybe to a service which then
+    updates a back-end data store.
     </p>
-    
+
     <p>
       The glue between the View and the Controller is something called the <bold>Scope</bold>, and in Angular you’re
-going to see a lot of objects or variables that start with $. <bold>$scope</bold> represents the scope object.
+    going to see a lot of objects or variables that start with $. <bold>$scope</bold> represents the scope object.
     </p>
     <p>
-When I say it’s the glue, it literally is the thing that ties the controller to the view.
+      When I say it’s the glue, it literally is the thing that ties the controller to the view.
     </p>
     <p>
       A <bold>ViewModel</bold> literally is the <bold>model</bold> – the data – for the view. Well that’s really all the scope is. The
-scope is our ViewModel and it’s the glue between the view and the controller.
+    scope is our ViewModel and it’s the glue between the view and the controller.
     </p>
-    
-    
-    
   </div>
+
+  <img class="img-responsive" style="width: 50%;" src="/assets/angularjs-creating-controller-view.png" alt="">
+  <div class="caption-full">
+    <p>
+      Here’s an example of a really simple controller called, oddly enough, <bold>SimpleController</bold>. You’ll notice
+    an interesting thing here in the parameter signature. You’ll see that we pass <bold>$scope</bold>. This is
+    <bold>dependency injection</bold> that’s built into AngularJS.
+
+    </p>
+    <p>
+      What this is going to do is Angular, when this controller gets used, will automatically inject a <bold>scope</bold>
+    object in. You’ll see that from there we’ll take that object and add in a property onto it called
+    <bold>customers</bold> which is simply an array of object literals. So we have our same scenario with name and
+    city here.
+    </p>
+    <p>
+      You’ll notice up here [at the top] we have an <bold>ng-controller</bold>, SimpleController. That’ll automatically
+    tie in this [our controller in the second half of the slide].
+
+    </p>
+    <p>
+    <bold>When this [the controller] gets initialised the scope gets passed in but it’s initially empty.</bold>
+    </p>
+  </div>
+  <img class="img-responsive" style="width: 70%;" src="/assets/angularjs-ViewModel-sample-code.png" alt="">
+  <div class="caption-full">
+    <p><bold>Output of above sample code : </bold></p>
+    <p>List the name of employees </p>
+    <div data-ng-controller="SimpleController">
+      <p>Adding a Simple Controller</p>
+      <ul>
+        <li data-ng-repeat="cust in customers"> {{ cust.name}} -- {{ cust.city}} </li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
 </div>
+<script>
+  function SimpleController($scope) {
+    $scope.customers = [
+      {name: 'Ramesh Jain', city: 'Delhi'},
+      {name: 'Suresh Sharma', city: 'Lucknow'},
+      {name: 'Sachin Patil', city: 'Mumbai'},
+      {name: 'Vipin Dev', city: 'Calcutta'},
+      {name: 'Ashish Rathore', city: 'Surat'}
+    ];
+  }
+</script>  

@@ -1,0 +1,38 @@
+<div class="thumbnail">
+  <div class="caption-full">
+    <h1 class="text-center">Modules, Routes and Factories</h1>
+    <p>In this section we’re going to talk about how to create modules, and how modules can actually be
+      used to create other things like controllers, routes, factories and services, and how all this fits
+      together.</p>
+  </div>
+  <div class="caption-full">
+    <h4 class="pull-right">&nbsp;</h4>
+    <h4><a href="#">ViewModel</a></h4>
+    <p>
+      <img class="img-responsive pull-left" style="width: 30%;margin: 0px 20px 0px 0px;" src="/assets/angularjs-module-config-routes.png" alt="">
+
+      So a module can have something called a <bold>config</bold> function, and it can be defined to use
+    different routes. Now routes again are really important in the SPA world because if you have
+    different views and those views need to be loaded into the shell page then we need a way to be able
+    to track what route we’re on and what view that’s associated with and then what controller goes
+    with that view and how we do all of that marrying together of these different pieces.
+    </p>
+    <p>
+      When you define a route in <bold>AngularJS</bold> you can define two things on that route – two of the key
+      things, I should say.</p>
+    <p>
+      One of those is the view. So what view when that route such as “unit.org/orders” then maybe go to
+      “orderspartial.html” or “ordersfragment.html” or whatever you want to call it.
+    </p>
+    <p>
+      Then that view needs a controller. Instead of hard-coding the controller into the view – which works
+      and you can certainly do it: I showed that in the previous section – we can actually go in and do this
+      on our own through the route. This is the way I would definitely recommend you do it.
+    </p>
+  </div>
+
+  <div class="caption-full">
+    <p>
+    </p>
+  </div>
+</div>
