@@ -10,3 +10,10 @@ development:
   username: rapatil
   password: rapatil
   host: localhost
+  
+production:
+  <<: *pg
+  database: da7gs572t2cika
+  username: envvwdcueigwch
+  password: wzUB0rc9-U_SZMx1YrV978_c2k
+  host: ec2-54-221-227-25.compute-1.amazonaws.com:5432
