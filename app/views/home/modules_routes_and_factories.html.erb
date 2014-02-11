@@ -6,8 +6,6 @@
       together.</p>
   </div>
   <div class="caption-full">
-    <h4 class="pull-right">&nbsp;</h4>
-    <h4><a href="#">ViewModel</a></h4>
     <p>
       <img class="img-responsive pull-left" style="width: 30%;margin: 0px 20px 0px 0px;" src="/assets/angularjs-module-config-routes.png" alt="">
 
@@ -19,13 +17,13 @@
     </p>
     <p>
       When you define a route in <bold>AngularJS</bold> you can define two things on that route – two of the key
-      things, I should say.</p>
+    things, I should say.</p>
     <p>
       One of those is the view. So what view when that route such as “unit.org/orders” then maybe go to
-      “orderspartial.html” or “ordersfragment.html” or whatever you want to call it.
+      “orderspartial.html” or “ordersfragment.html” or whatever you want to call it. Then that view needs a controller.
     </p>
     <p>
-      Then that view needs a controller. Instead of hard-coding the controller into the view – which works
+      Instead of hard-coding the controller into the view – which works
       and you can certainly do it: I showed that in the previous section – we can actually go in and do this
       on our own through the route. This is the way I would definitely recommend you do it.
     </p>
@@ -33,6 +31,19 @@
 
   <div class="caption-full">
     <p>
+      <img class="img-responsive pull-right" style="width: 50%;margin: 0px 20px 0px 0px;" src="/assets/angularjs-module-tree.png" alt="">
+      So what we need to do is when we define our <bold>ng-app</bold>, earlier we didn’t assign it to anything, and so
+what that did was implicitly create a scope behind the scenes and it still worked we saw with the
+data binding and the filters and all that good stuff. We now want to graduate to a more modular
+application and Angular is very, very modular if you take advantage of it.
+
+    </p>
+    <p>
+      There is a <bold>module</bold> object and I’ll show you how to create that – you literally just say <bold>angular.module</bold>
+– and off of the module you can configure the routes, create custom filters, custom directives. You
+can get data from different sources using Factories, Services, Providers or Values. You can then even
+create Controllers using the module. You can think of the module as really just an object container,
+and then in that container you can have all these different things that you see here.
     </p>
   </div>
 </div>
