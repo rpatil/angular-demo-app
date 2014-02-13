@@ -22,20 +22,38 @@
     <p>There’s two kind of ways you can load it.
     </p>
     <p><bold>First off</bold>, the view could be embedded as a script template in the actual shell page and then we could
-      just tell Angular “Heh! The template id to load... it’s kinda like saying ‘The view id is x’”.
+    just tell Angular “Heh! The template id to load... it’s kinda like saying ‘The view id is x’”.
     </p>
     <p><bold>The second way</bold> is back up on the server you might actually have all these Views and I like to call
-      them “partials” because they’re part of a page. You can tell Angular “the template URL for what I
-      want to load” and then you give it the URL to the server, and I’m going to show that coming up here.
+    them “partials” because they’re part of a page. You can tell Angular “the template URL for what I
+    want to load” and then you give it the URL to the server, and I’m going to show that coming up here.
     </p>
-  </div>
-  <img class="img-responsive" style="width:60%;" src="/assets/angularjs-roles_of_routes-defining.png">
-  <div class="caption-full">
     <p>
       This is a really important feature because we want to be able to go in and load different partials or
-fragments and then that will be kind of how our SPA works.
+      fragments and then that will be kind of how our SPA works.
     </p>
   </div>
-  
+  <div class="caption-full text-justify">
+    <img class="img-responsive pull-left" style="width:70%;" src="/assets/angularjs-roles_of_routes-defining.png">
+    <p>
+      Now what I’m going to do is configure the module with some routes. Another object that’s available
+      in Angular is called the <bold>routeProvider</bold>, as you can see here. It’s kind of like the <bold>scope</bold> – it’s injected in
+      dynamically just by defining <bold>$routeProvider</bold> as your parameter.
+    </p>
+    <p>
+      In this case we’re going to say “For the routeProvider when the route is just a slash “/” to the root
+      we want to use SimpleController with View1.html. When the route is “/partial2” we want to use the
+      same controller in this case but you can certainly do a different one, with a template URL of View2.
+    </p>
+    <p>
+      Now the template URL: you might give it a folder where these partials are going to live, and I actually
+      like to call my folder “partials” but you don’t have to.
+    </p>
+    <p>
+      Otherwise if it [the route] doesn’t mean any of those routes we’re going to redirect back to the root,
+      which ultimately goes back up to here [the “/” route specified with the first “.when” statement]
+      which will load View1.
+  </div>
+
 
 </div>
