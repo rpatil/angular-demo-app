@@ -2,11 +2,36 @@
   <div class="caption-full">
     <h1 class="text-center">Creating a Modules</h1>
     <p>In this example we can see module <bold>demoApp</bold>. You might wonder what exactly is the
-      empty array for?
+    empty array for?
     </p>
     <p>
       The answer is this is where <bold>dependency injection</bold> comes in because your module might actually rely
-      on other modules to get data.</p>
+    on other modules to get data.</p>
   </div>
   <img class="img-responsive" style="width:80%;" src="/assets/angularjs-create-a-module.png">
+  <div class="caption-full">
+    <p>
+      We have demoApp again. We say “Heh Angular! Create me a module called <bold>demoApp</bold>.” I need to
+    rely on another module. In this case I just called it </bold>helperModule</bold>. This would be some other
+    JavaScript file that you might reference. I then has another angular reference and in the quotes here
+    [first module ‘demoApp’ quotes] you would see <bold>helperModule</bold> and it would have maybe just filters
+    and directives in it and that’s all it has.
+    </p>
+  </div>
+  <img class="img-responsive" style="width:60%;" src="/assets/angularjs-creating-controller-in-module.png">
+  <div class="caption-full">
+    <p>
+      This is the more, I would say, “official” way to create a controller.
+    </p>
+    <p>
+      You’ll notice up top that we have our <bold>demoApp</bold>. We just create that the same way. In this case we’re
+saying that it has no dependencies - an empty array.
+    </p>
+  </div>
+  <img class="img-responsive" style="width:80%;" src="/assets/angularjs-creating-controller-in-module-explaination.png">
+  
+  
+  
+  
+  
 </div>
