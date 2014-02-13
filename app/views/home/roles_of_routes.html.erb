@@ -1,0 +1,41 @@
+<div class="thumbnail">
+  <div class="caption-full">
+    <h1 class="text-center">The Roles of Routes</h1>
+    <p>Now once you’ve defined a module and a controller, at some point if you’re building a single page
+      application you’re going to need routes because we need to load different views into our shell page.
+    </p>
+  </div>
+  <img class="img-responsive" style="width:60%;" src="/assets/angularjs-roles_of_routes.png">
+  <div class="caption-full">
+    <p>
+      Now once you’ve defined a module and a controller, at some point if you’re building a single page
+      application you’re going to need routes because we need to load different views into our shell page.
+    </p>
+    <p>This will be an example of four different routes.
+    </p>
+    <p>
+      We have when View1 is clicked maybe there’s a link to it and that link is something like “/view1”.
+      Typically you have a hash but you’ll see that coming up. That will load that view. Then when they
+      click on a link that has View2 in the path then that would load up View2 but it’s not going to load up
+      the whole shell page. Angular will only load up the page that you want.
+    </p>
+    <p>There’s two kind of ways you can load it.
+    </p>
+    <p><bold>First off</bold>, the view could be embedded as a script template in the actual shell page and then we could
+      just tell Angular “Heh! The template id to load... it’s kinda like saying ‘The view id is x’”.
+    </p>
+    <p><bold>The second way</bold> is back up on the server you might actually have all these Views and I like to call
+      them “partials” because they’re part of a page. You can tell Angular “the template URL for what I
+      want to load” and then you give it the URL to the server, and I’m going to show that coming up here.
+    </p>
+  </div>
+  <img class="img-responsive" style="width:60%;" src="/assets/angularjs-roles_of_routes-defining.png">
+  <div class="caption-full">
+    <p>
+      This is a really important feature because we want to be able to go in and load different partials or
+fragments and then that will be kind of how our SPA works.
+    </p>
+  </div>
+  
+
+</div>

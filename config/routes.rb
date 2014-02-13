@@ -13,6 +13,7 @@ AngularDemoApp::Application.routes.draw do
   match '/ViewModel', :to => 'home#view_model', :via => [:get]
   match '/ModulesRoutesAndFactories', :to => 'home#modules_routes_and_factories', :via => [:get]
   match '/CreatingModules', :to => 'home#creating_modules', :via => [:get]
+  match '/RolesOfRoutes', :to => 'home#roles_of_routes', :via => [:get]
   
   
   root :to => 'home#spa'
